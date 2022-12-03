@@ -21,6 +21,11 @@ public class PCInputController : MonoBehaviour
         {
             isJump = true;
         }
+        if (Input.GetButtonDown("Cancel"))
+        {
+            Debug.Log("Space key was pressed.");
+            Application.Quit();
+        }
     }
 
     //Функция, котрая включается через некотрое количество кадров, не зависит от мощьности компьютера, можно настраивать
@@ -28,6 +33,6 @@ public class PCInputController : MonoBehaviour
     {
         playerMovement.Move(move, isJump); //запускаем метод движения и передаем данные
         isJump = false;
-
+       
     }
 }
